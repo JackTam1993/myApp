@@ -1,0 +1,32 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="英超" icon="ion-ios-football" href="#/tab/dash">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="西甲" icon="ion-ios-football" href="#/tab/chats">
+    <ion-nav-view name="tab-chats"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="德甲" icon="ion-ios-football" href="#/tab/german">
+    <ion-nav-view name="tab-german"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="意甲" icon="ion-ios-football" href="#/tab/account">
+    <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="法甲" icon="ion-ios-football" href="#/tab/france">
+    <ion-nav-view name="tab-france"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>

@@ -1,0 +1,80 @@
+<ion-view view-title="法甲">
+  <ion-content>
+    <ion-slide-box show-pager="false">
+      <ion-slide>
+        <ion-list>
+          <div style="text-align: center">
+            <ion-item>{{tabs.tabs.saicheng1}}</ion-item>
+          </div>
+          <ion-item ng-repeat="tab in tabs.views.saicheng1">
+            <div style="text-align: center">
+              <span>{{tab.c2}} {{tab.c3}}</span><br><span>{{tab.c4T1}}</span><span>&nbsp;{{tab.c4R}}&nbsp;</span><span>{{tab.c4T2}}</span>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div style="text-align: center">
+            <ion-item>{{tabs.tabs.saicheng2}}</ion-item>
+          </div>
+          <ion-item ng-repeat="tab in tabs.views.saicheng2">
+            <div style="text-align: center">
+              <span>{{tab.c2}} {{tab.c3}}</span><br><span>{{tab.c4T1}}</span><span>&nbsp;VS&nbsp;</span><span>{{tab.c4T2}}</span>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div style="text-align: center">
+            <ion-item>{{tabs.tabs.jifenbang}}</ion-item>
+          </div>
+          <div class="row" style="text-align: center">
+            <div class="col col-10">排名</div>
+            <div class="col col-50">球队</div>
+            <div class="col col-10">场数</div>
+            <div class="col col-10">胜</div>
+            <div class="col col-10">平</div>
+            <div class="col col-10">负</div>
+          </div>
+          <ion-item ng-repeat="tab in tabs.views.jifenbang">
+            <div class="row" style="text-align: center">
+              <div class="col col-10">{{tab.c1}}</div>
+              <div class="col col-50">{{tab.c2}}</div>
+              <div class="col col-10">{{tab.c3}}</div>
+              <div class="col col-10">{{tab.c41}}</div>
+              <div class="col col-10">{{tab.c42}}</div>
+              <div class="col col-10">{{tab.c43}}</div>
+              <!--<span>{{tab.c1}}</span><span>&nbsp;&nbsp;</span><span>{{tab.c2}}</span><span>{{tab.c3}}</span><span>{{tab.c41}}</span><span>{{tab.c42}}</span><span>{{tab.c43}}</span>-->
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+      <ion-slide>
+        <ion-list>
+          <div style="text-align: center">
+            <ion-item>{{tabs.tabs.sheshoubang}}</ion-item>
+            <div class="row">
+              <div class="col">排名</div>
+              <div class="col">球员</div>
+              <div class="col">所属球队</div>
+              <div class="col">进球</div>
+              <div class="col">助攻</div>
+            </div>
+          </div>
+          <ion-item ng-repeat="tab in tabs.views.sheshoubang">
+            <div class="row" style="text-align: center">
+              <div class="col">{{tab.c1}}</div>
+              <div class="col">{{tab.c2}}</div>
+              <div class="col">{{tab.c3}}</div>
+              <div class="col">{{tab.c4}}</div>
+              <div class="col">{{tab.c5}}</div>
+              <!--<span>{{tab.c1}}</span><span>&nbsp;&nbsp;</span><span>{{tab.c2}}</span><span>{{tab.c3}}</span><span>{{tab.c41}}</span><span>{{tab.c42}}</span><span>{{tab.c43}}</span>-->
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>
