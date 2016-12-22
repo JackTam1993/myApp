@@ -9,6 +9,46 @@ OK,let us use Chinese.
 ![image](https://github.com/JackTam1993/myApp/blob/master/img/1.png)
 
 下图为使用bind once后的情况，可以发现一开始加载的watcher数大概只有原来的10分之1，在经过一段时间的操作后watcher数峰值大概为340个左右，而且会在达到峰值后回落。虽然优化效果也比较明显，但是与作者的说法还是不太一致，之后会继续参考作者的思路看看能不能做到作者所说的优化效果。
+
+部分代码片段：
+```javascript
+<ion-slide>
+        <ion-list>
+          <div style="text-align: center">
+            <ion-item>{{tabs.tabs.saicheng1}}</ion-item>
+          </div>
+          <ion-item bindonce ng-repeat="tab in tabs.views.saicheng1">
+            <div style="text-align: center">
+              <span bo-bind="tab.c2"></span><span bo-bind="tab.c3"></span><br><span bo-bind="tab.c4T1"></span><span bo-bind="tab.c4R"></span><span bo-bind="tab.c4T2"></span>
+            </div>
+          </ion-item>
+        </ion-list>
+</ion-slide>
+<ion-slide>
+        <ion-list>
+          <div style="text-align: center">
+            <ion-item>{{tabs.tabs.sheshoubang}}</ion-item>
+            <div class="row">
+              <div class="col">排名</div>
+              <div class="col">球员</div>
+              <div class="col">所属球队</div>
+              <div class="col">进球</div>
+              <div class="col">助攻</div>
+            </div>
+          </div>
+          <ion-item bindonce ng-repeat="tab in tabs.views.sheshoubang">
+            <div class="row" style="text-align: center">
+              <div class="col"><span bo-html="tab.c1"></span></div>
+              <div class="col"><span bo-html="tab.c2"></span></div>
+              <div class="col"><span bo-html="tab.c3"></span></div>
+              <div class="col"><span bo-html="tab.c4"></span></div>
+              <div class="col"><span bo-html="tab.c5"></span></div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-slide>
+```
+
 ![image](https://github.com/JackTam1993/myApp/blob/master/img/2.png)
 
 install dependencies : npm install & bower install & npm ionic cordova -g.
